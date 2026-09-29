@@ -1,0 +1,33 @@
+﻿# Frontend
+node_modules/
+dist/
+dist-ssr/
+.env
+.env.local
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Backend database
+*.db
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+disaster-relief-frontend/.git-internship/
