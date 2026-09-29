@@ -31,3 +31,5 @@ Thumbs.db
 *.log
 
 disaster-relief-frontend/.git-internship/
+
+disaster-relief-frontend/disaster_resource_backend/
