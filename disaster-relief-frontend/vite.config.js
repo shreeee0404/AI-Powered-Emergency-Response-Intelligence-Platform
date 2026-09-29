@@ -1,3 +1,4 @@
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
@@ -7,8 +8,6 @@ const BACKEND_URL =
   process.env.VITE_DEV_BACKEND_URL || 'http://127.0.0.1:8000'
 
 // Proxy all "/api" requests to the FastAPI backend and strip the prefix.
-// This keeps the frontend on a single origin during development, which
-// avoids CORS issues and eliminates "Failed to fetch" network errors.
 const apiProxy = {
   '/api': {
     target: BACKEND_URL,
@@ -19,14 +18,19 @@ const apiProxy = {
 }
 
 export default defineConfig({
+  // GitHub Pages repository path
+  base: '/AI-Powered-Emergency-Response-Intelligence-Platform/',
+
   plugins: [
     react(),
     tailwindcss(),
   ],
+
   server: {
     host: true,
     proxy: apiProxy,
   },
+
   preview: {
     host: true,
     proxy: apiProxy,
